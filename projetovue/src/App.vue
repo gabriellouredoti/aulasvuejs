@@ -1,23 +1,18 @@
 <template>
   <div id="app">
     <h1>Olá</h1>
-    <cliente/>
-    <produtos/>
-
-    
+    <Cliente/>
   </div>
 </template>
 
 <script>
 
 import Cliente from './components/Cliente';
-import Produtos from './components/Produtos';
 
 export default {
   name: 'App',
   components:{
     Cliente,
-    Produtos
   }
 }
 </script>

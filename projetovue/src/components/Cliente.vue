@@ -2,12 +2,18 @@
     <div>
         <h2>Cliente aqui</h2>
         <h3>Descrição Cliente</h3>
+        {{ 2 + 2 * 2573856397777767985}}
         <hr>
     </div>
 </template>
 
 <script>
 export default {
+    data(){
+        return {
+            
+        }
+    }
 
 }
 </script>
