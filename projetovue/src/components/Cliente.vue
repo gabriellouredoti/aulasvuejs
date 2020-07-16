@@ -1,8 +1,16 @@
 <template>
     <div>
         <h2>Cliente aqui</h2>
-        <h3>Descrição Cliente</h3>
-        {{ 2 + 2 * 2573856397777767985}}
+        <!-- :value="nome" data-binding, para exibir dados e não modificar -->
+        <input type="text" :value="nome">
+        <input type="text" :value="descricao">
+       
+        <!-- {{}} Interpolação -->
+        <p>{{nome}}</p>
+        <p>{{numero}}</p>
+        <p>{{email}}</p>
+        <p>{{idade}}</p>
+        <p>{{descricao}}</p>
         <hr>
     </div>
 </template>
@@ -11,7 +19,11 @@
 export default {
     data(){
         return {
-            
+            nome: "Gabriel",
+            numero: "96",
+            email: "gabrielferreiralouredo@gmail.com",
+            idade: "22",
+            descricao: "Lore ipsum"
         }
     }
 
@@ -21,7 +33,7 @@ export default {
 // Estilos ficam aqui
 <style scoped>
     div{
-        background-color: #0984e3;
+        font-size: 16px;
     }
 
 </style>
