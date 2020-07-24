@@ -4,6 +4,9 @@
         <!-- :value="nome" data-binding, para exibir dados e não modificar -->
         <input type="text" :value="nome">
         <input type="text" :value="descricao">
+
+        <!-- v-model="" to-way-data-binding -> formularios, checkbox's -->
+        <input type="text" v-model="nome">
        
         <!-- {{}} Interpolação -->
         <p>{{nome}}</p>
