@@ -1,20 +1,27 @@
 <template>
-    <div>
-        <h2>Cliente aqui</h2>
+    <div id="cliente">
+        <!-- <h4>Nome: {{nome}}</h4> -->
+        <!-- <p>{{descricao}}</p> -->
+        <!-- <p>Número: {{numero}}</p>
+        <p>Email: {{email}}</p>
+        <p>Idade: {{idade}}</p> -->
+
+
         <!-- :value="nome" data-binding, para exibir dados e não modificar -->
+        <!--       
         <input type="text" :value="nome">
-        <input type="text" :value="descricao">
+        <input type="text" :value="descricao"> -->
 
         <!-- v-model="" to-way-data-binding -> formularios, checkbox's -->
-        <input type="text" v-model="nome">
+        <!-- <input type="text" v-model="nome"> -->
        
         <!-- {{}} Interpolação -->
-        <p>{{nome}}</p>
+        <!-- <p>{{nome}}</p>
         <p>{{numero}}</p>
         <p>{{email}}</p>
         <p>{{idade}}</p>
         <p>{{descricao}}</p>
-        <hr>
+        <hr> -->
     </div>
 </template>
 
@@ -22,12 +29,15 @@
 export default {
     data(){
         return {
-            nome: "Gabriel",
+            //nome: "Gabriel",
             numero: "96",
             email: "gabrielferreiralouredo@gmail.com",
             idade: "22",
             descricao: "Lore ipsum"
         }
+    },
+    props: {
+        nome: String
     }
 
 }
@@ -35,8 +45,11 @@ export default {
 
 // Estilos ficam aqui
 <style scoped>
-    div{
-        font-size: 16px;
+    #cliente{
+        background-color: #f4f4f5;
+        padding: 1%;
+        margin-bottom: 10px;
+
     }
 
 </style>

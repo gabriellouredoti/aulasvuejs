@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <h1>Olá</h1>
-    <Cliente/>
+    <!-- props -->
+    <Cliente nome1="Gabriel"/>
+   
   </div>
 </template>
 
