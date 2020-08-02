@@ -1,5 +1,9 @@
 <template>
     <div id="cliente">
+        <!-- prop -->
+        <p>{{nome}} {{idade}} {{email}}</p>
+        <!-- prop do tipo objeto -->
+        <p>{{dados}}</p>
         <!-- <h4>Nome: {{nome}}</h4> -->
         <!-- <p>{{descricao}}</p> -->
         <!-- <p>Número: {{numero}}</p>
@@ -31,25 +35,19 @@ export default {
         return {
             //nome: "Gabriel",
             numero: "96",
-            email: "gabrielferreiralouredo@gmail.com",
-            idade: "22",
+            // email: "gabrielferreiralouredo@gmail.com",
+            // idade: "22",
             descricao: "Lore ipsum"
         }
     },
-    props: {
-        nome: String
+    props:{
+        nome: String,
+        idade: Number,
+        email: String,
+        // prop do tipo objeto
+        dados: Object
     }
 
 }
 </script>
 
-// Estilos ficam aqui
-<style scoped>
-    #cliente{
-        background-color: #f4f4f5;
-        padding: 1%;
-        margin-bottom: 10px;
-
-    }
-
-</style>

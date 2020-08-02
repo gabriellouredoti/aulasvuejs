@@ -1,8 +1,13 @@
 <template>
   <div id="app">
-    <h1>Olá</h1>
+    <!-- <h1>Olá</h1> -->
     <!-- props -->
-    <Cliente nome1="Gabriel"/>
+    <!-- reatividade com props -->
+    <input type="text" v-model="lotacao">
+    <Cliente :nome="lotacao" idade="22" email="gabriellouredo.ti"/>
+    <Cliente nome="Gabriel Ferreira" idade="22" email="gabriellouredo.ti"/>
+    <input type="text" v-model="dadosFunc.nome">
+    <Cliente :dados="dadosFunc"/>
    
   </div>
 </template>
@@ -13,6 +18,17 @@ import Cliente from './components/Cliente';
 
 export default {
   name: 'App',
+  data(){
+    return{
+      lotacao: "SEMAD - Departamento de Sistemas",
+      // variavel de objeto
+      dadosFunc: {
+        nome: "Gabriel Louredo",
+        telefone: "99458679"
+      }
+    
+    }
+  },
   components:{
     Cliente,
   }
@@ -25,7 +41,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color:black;
   margin-top: 60px;
 }
 </style>
