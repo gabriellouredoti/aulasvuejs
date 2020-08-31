@@ -3,11 +3,13 @@
     <!-- <h1>Olá</h1> -->
     <!-- props -->
     <!-- reatividade com props -->
-    <input type="text" v-model="lotacao">
-    <Cliente :nome="lotacao" idade="22" email="gabriellouredo.ti"/>
-    <Cliente nome="Gabriel Ferreira" idade="22" email="gabriellouredo.ti"/>
+    <!-- <input type="text" v-model="lotacao"> -->
+    <!-- <Cliente :nome="lotacao" idade="22" email="gabriellouredo.ti"/> -->
+    <!-- <Cliente nome="Gabriel Ferreira" idade="22" email="gabriellouredo.ti" /> -->
     <input type="text" v-model="dadosFunc.nome">
-    <Cliente :dados="dadosFunc"/>
+
+    <!-- Diretivas condicionais v-if em forma de prop -->
+    <Cliente :dados="dadosFunc" :showName="true"/>
    
   </div>
 </template>

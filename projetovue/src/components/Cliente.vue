@@ -1,9 +1,13 @@
 <template>
     <div id="cliente">
         <!-- prop -->
-        <p>{{nome}} {{idade}} {{email}}</p>
+        <!-- <p >{{nome}} {{idade}} {{email}}</p> -->
         <!-- prop do tipo objeto -->
-        <p>{{dados}}</p>
+
+        <!-- mesmo sendo falso o v-show não deleta o elemento -->
+        <!-- <p v-show="showName == true">{{dados.nome}}</p> -->
+        <p v-if="showName == true">{{dados.nome}}</p>
+        <p v-else>Usuario escondeu o nome</p>
         <!-- <h4>Nome: {{nome}}</h4> -->
         <!-- <p>{{descricao}}</p> -->
         <!-- <p>Número: {{numero}}</p>
@@ -41,11 +45,12 @@ export default {
         }
     },
     props:{
-        nome: String,
-        idade: Number,
-        email: String,
+        // nome: String,
+        // idade: Number,
+        // email: String,
         // prop do tipo objeto
-        dados: Object
+        dados: Object,
+        showName: Boolean
     }
 
 }
